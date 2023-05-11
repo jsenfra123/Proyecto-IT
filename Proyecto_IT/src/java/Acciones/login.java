@@ -17,7 +17,7 @@ public class login extends ActionSupport {
     }
     
     public String execute() throws Exception {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return ERROR; 
     }
     
 }
