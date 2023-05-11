@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-may-2023 20:42:17 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="DAO.Transferncia" table="transferncia" catalog="banco" optimistic-lock="version">
+        <id name="idTransferencia" type="java.lang.Integer">
+            <column name="id_transferencia" />
+            <generator class="identity" />
+        </id>
+        <property name="numeroTransferencia" type="int">
+            <column name="numero_transferencia" not-null="true" />
+        </property>
+        <property name="fechaEmision" type="date">
+            <column name="fecha_emision" length="10" not-null="true" />
+        </property>
+        <property name="cuentaOrigen" type="string">
+            <column name="cuenta_origen" length="256" not-null="true" />
+        </property>
+        <property name="cuentaDestino" type="string">
+            <column name="cuenta_destino" length="256" not-null="true" />
+        </property>
+        <property name="cantidad" type="int">
+            <column name="cantidad" not-null="true" />
+        </property>
+        <property name="concepto" type="string">
+            <column name="concepto" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-may-2023 20:42:17 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="DAO.Clientes" table="clientes" catalog="banco" optimistic-lock="version">
+        <id name="dni" type="string">
+            <column name="dni" length="256" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="256" not-null="true" />
+        </property>
+        <property name="apellidos" type="string">
+            <column name="apellidos" length="256" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="256" not-null="true" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="256" not-null="true" />
+        </property>
+        <property name="telefono" type="int">
+            <column name="telefono" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-may-2023 20:42:17 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="DAO.Prestamo" table="prestamo" catalog="banco" optimistic-lock="version">
+        <id name="idPrestamo" type="java.lang.Integer">
+            <column name="id_prestamo" />
+            <generator class="identity" />
+        </id>
+        <property name="tipoPrestamo" type="string">
+            <column name="tipo_prestamo" length="256" not-null="true" />
+        </property>
+        <property name="numeroPrestamo" type="int">
+            <column name="numero_prestamo" not-null="true" />
+        </property>
+        <property name="fechaConstitucion" type="date">
+            <column name="fecha_constitucion" length="10" not-null="true" />
+        </property>
+        <property name="fechaCancelacion" type="date">
+            <column name="fecha_cancelacion" length="10" not-null="true" />
+        </property>
+        <property name="capitalConcedido" type="double">
+            <column name="capital_concedido" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="plazos" type="int">
+            <column name="plazos" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
